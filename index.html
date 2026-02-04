@@ -1,110 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kevin Elias</title>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kevin Elias</title>
-        <!-- CSS: Inside head tag -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <!-- Devicon: Programming languages icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-        <style>
-            body {
-                background-color: #f5e1c8; /* Cream tan color */
-            }
-        </style>
-    </head>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- Devicon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
 
-    <body>
-        <nav class="navbar navbar-dark navbar-expand-lg bg-dark ">
-            <div class="container-fluid">
-                <div class="mx-4">
-                    <a class="navbar-brand" href="#">Kevin Elias</a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reading Log</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <style>
+      :root {
+        --bg: #f5e1c8; /* cream/tan */
+        --card: #ffffff;
+      }
 
-        <div class="container my-4 ">
-            <div class="row justify-content-center">
-                <div class="col-lg mb-lg-4">
-                    <img src="IMG_0960.jpg" class="img-fluid" alt="" srcset="">
-                </div>
-                <div class="col-lg mx-2 align-self-center">
-                    <div class="my-3">
-                        <h1 class="text-center">I'm Kevin Elias</h1>
-                        <p>As a ECET major I enjoy to design circuit and do things that involve hands on work.
-                         I remember when I first started to construct circuits I thought it was one 
-                         of the most amazing things I have ever done. Outside of class I enjoy to workout 
-                         and play soccer. I've been playing soccer my whole life and enjoy the sport a lot.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="my-4">
-                <div class="text-center mb-4">
-                    <h1>My Skills</h1>
-                </div>
-                <div class="row ">
-                    <style>
-                        i {
-                            font-size: 4em;
-                        }
-                    </style>
-                    <!-- Skills -->
-                    <div class="col">
-                        <div class="text-center">
-                            <h4>Arduino</h4>
-                            <i class="devicon-arduino-plain"></i>
-          
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="text-center">
-                            <h4>Apple</h4>
-                            <i class="devicon-apple-original colored"></i>
-          
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="text-center">
-                            <h4>Chrome</h4>
-                            <i class="devicon-chrome-plain-wordmark"></i>
-          
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="text-center">
-                            <h4>Labview</h4>
-                            <i class="devicon-labview-plain"></i>
-          
-          
-                        </div>
-                    </div>
-                </div>
-            </div>
+      body {
+        background: var(--bg);
+      }
+
+      .hero-card {
+        background: var(--card);
+        border-radius: 18px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      .pfp {
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+      }
+
+      .btn-nfc {
+        border-radius: 14px;
+        padding: 12px 14px;
+        font-weight: 600;
+      }
+
+      .section-title {
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .icon-skill {
+        font-size: 3.2rem;
+      }
+
+      .footer-note {
+        opacity: 0.75;
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================================================
+         ✅ EDIT HERE (change ONLY this block)
+    ========================================================== -->
+    <script>
+      const PROFILE = {
+        name: "Kevin Elias",
+        headline: "Electrical and Computer Engineering Techonolgy ",
+        about:
+          "Hello My name is Kevin Elias I am a Junior At Western Carolina where I student Electrical and Computer Engineering Techonolgy.I have a strong interest in the embedded systems world, particularly logic systems and control systems. I enjoy working with hardware and software together to understand how systems operate, respond, and are tested in real-world applications. I am especially interested in roles such as test engineer or product engineer, where problem-solving, system verification, and improving reliability are key. My goal is to continue developing hands-on skills that allow me to contribute to building and validating efficient, well-designed engineering solutions",
+        photo: "IMG_0960.jpg", // put this image in the same folder as index.html
+
+        // Contact
+        phoneDisplay: "(828)-429-2706",
+        phoneTel: "+18284292706", // MUST be +1 + number
+        email: "kevine1010@outlook.com",
+        linkedin: "www.linkedin.com/in/kevin-elias-a14b8b351",
+
+        // Skills (devicon class names)
+        skills: [
+          { label: "Arduino", iconClass: "devicon-arduino-plain" },
+          { label: "Apple", iconClass: "devicon-apple-original colored" },
+          { label: "Chrome", iconClass: "devicon-chrome-plain-wordmark" },
+          { label: "LabVIEW", iconClass: "devicon-labview-plain" },
+        ],
+
+        // Projects
+        projects: [
+          {
+            title: "Bee Heater (ECET Project)",
+            desc: "A project focused on safe, controlled heating for beehives. Add a short line about what you built and what tools you used.",
+            linkText: "View Repo",
+            link: "https://github.com/yourusername/yourrepo",
+          },
+          {
+            title: "Circuit Build / Lab Project",
+            desc: "Hands-on build showing measurements, troubleshooting, and final results.",
+            linkText: "View Details",
+            link: "#",
+          },
+        ],
+      };
+    </script>
+    <!-- =========================================================
+         END EDIT BLOCK
+    ========================================================== -->
+
+    <!-- NAV -->
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <div class="mx-3">
+          <a class="navbar-brand fw-bold" href="#top" id="navName">Name</a>
         </div>
-        <!-- JavaScript: Above <body>  -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-            crossorigin="anonymous"></script>
-    </body>
 
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <main id="top" class="container my-4">
+      <div class="hero-card">
+        <div class="row g-0">
+          <div class="col-lg-5">
+            <img id="photo" class="pfp" alt="Profile photo" />
+          </div>
+
+          <div class="col-lg-7 p-4 p-lg-5">
+            <!-- ABOUT -->
+            <section id="about">
+              <h1 class="section-title text-center text-lg-start" id="nameH1"></h1>
+              <p class="text-muted mb-2 text-center text-lg-start" id="headline"></p>
+              <p class="mt-3" id="aboutText"></p>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact" class="mt-5">
+              <div class="text-center text-lg-start mb-3">
+                <h2 class="section-title">Contact</h2>
+                <p class="text-muted mb-0">Tap to connect instantly</p>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-12 col-md-4">
+                  <a id="phoneBtn" class="btn btn-dark w-100 btn-nfc" href="#">
+                    📞 Call
+                  </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                  <a id="emailBtn" class="btn btn-outline-dark w-100 btn-nfc" href="#">
+                    ✉️ Email
+                  </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                  <a
+                    id="linkedinBtn"
+                    class="btn btn-outline-dark w-100 btn-nfc"
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    🔗 LinkedIn
+                  </a>
+                </div>
+              </div>
+
+              <p class="footer-note mt-3 mb-0">
+                NFC tip: these buttons should be the first thing people can use.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <section id="skills" class="my-5">
+        <div class="text-center mb-4">
+          <h2 class="section-title">Skills</h2>
+        </div>
+        <div class="row text-center g-4" id="skillsGrid"></div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="my-5">
+        <div class="text-center mb-4">
+          <h2 class="section-title">Projects</h2>
+        </div>
+        <div class="row g-3" id="projectsGrid"></div>
+      </section>
+
+      <div class="text-center footer-note my-4">
+        © <span id="year"></span> <span id="footerName"></span>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Render profile -->
+    <script>
+      // Fill basic text
+      document.title = PROFILE.name;
+      document.getElementById("navName").textContent = PROFILE.name;
+      document.getElementById("nameH1").textContent = `I'm ${PROFILE.name}`;
+      document.getElementById("headline").textContent = PROFILE.headline;
+      document.getElementById("aboutText").textContent = PROFILE.about;
+
+      // Photo (fallback if missing)
+      const photoEl = document.getElementById("photo");
+      photoEl.src = PROFILE.photo;
+      photoEl.onerror = () => {
+        photoEl.src =
+          "https://images.unsplash.com/photo-1520975693411-bfd30e2d9b8a?auto=format&fit=crop&w=1200&q=70";
+      };
+
+      // Contact buttons
+      const phoneBtn = document.getElementById("phoneBtn");
+      phoneBtn.href = `tel:${PROFILE.phoneTel}`;
+      phoneBtn.textContent = `📞 Call: ${PROFILE.phoneDisplay}`;
+
+      const emailBtn = document.getElementById("emailBtn");
+      emailBtn.href = `mailto:${PROFILE.email}`;
+      emailBtn.textContent = `✉️ Email: ${PROFILE.email}`;
+
+      const linkedinBtn = document.getElementById("linkedinBtn");
+      linkedinBtn.href = PROFILE.linkedin;
+
+      // Skills grid
+      const skillsGrid = document.getElementById("skillsGrid");
+      PROFILE.skills.forEach((s) => {
+        const col = document.createElement("div");
+        col.className = "col-6 col-md-3";
+        col.innerHTML = `
+          <h5>${s.label}</h5>
+          <i class="icon-skill ${s.iconClass}"></i>
+        `;
+        skillsGrid.appendChild(col);
+      });
+
+      // Projects grid
+      const projectsGrid = document.getElementById("projectsGrid");
+      PROFILE.projects.forEach((p) => {
+        const col = document.createElement("div");
+        col.className = "col-md-6";
+        col.innerHTML = `
+          <div class="card border-0 shadow-sm" style="border-radius: 18px;">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">${p.title}</h5>
+              <p class="card-text">${p.desc}</p>
+              <a class="btn btn-sm btn-dark" href="${p.link}" target="_blank" rel="noreferrer">
+                ${p.linkText}
+              </a>
+            </div>
+          </div>
+        `;
+        projectsGrid.appendChild(col);
+      });
+
+      // Footer year/name
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("footerName").textContent = PROFILE.name;
+    </script>
+  </body>
 </html>
